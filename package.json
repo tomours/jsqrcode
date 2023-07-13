@@ -1,4 +1,20 @@
 {
+  "name": "@weisenb/jsqrcode",
+  "description": "javsacript qrcode decode",
+  "keywords": [
+    "qr",
+    "decode",
+    "qrcode",
+    "Javsacript"
+  ],
+  "version": "0.0.1",
+  "main": "lib/jsqrcode.min.js",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/weisenb/jsqrcode.git"
+  },
+  "files": ["lib"],
   "scripts": {
     "build": "rollup --config"
   },
@@ -9,6 +25,5 @@
     "@rollup/plugin-node-resolve": "^15.1.0",
     "@rollup/plugin-terser": "^0.4.3",
     "rollup": "^3.26.2"
-  },
-  "type": "module"
+  }
 }

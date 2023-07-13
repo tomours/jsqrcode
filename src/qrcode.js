@@ -90,13 +90,13 @@ qrcode.setWebcam = function (videoId) {
             navigator.mediaDevices.enumerateDevices()
                 .then(function (devices) {
                     devices.forEach(function (device) {
-                        console.log("deb1");
+                        // console.log("deb1");
                         if (device.kind === 'videoinput') {
                             if (device.label.toLowerCase().search("back") > -1)
                                 options = [{ 'sourceId': device.deviceId }];
                         }
-                        console.log(device.kind + ": " + device.label +
-                            " id = " + device.deviceId);
+                        // console.log(device.kind + ": " + device.label +
+                        //     " id = " + device.deviceId);
                     });
                 })
 
@@ -278,9 +278,9 @@ qrcode.process = function (ctx) {
             str += String.fromCharCode(data[i][j]);
     }
 
-    var end = new Date().getTime();
-    var time = end - start;
-    console.log(time);
+    // var end = new Date().getTime();
+    // var time = end - start;
+    // console.log(time);
 
     return qrcode.decode_utf8(str);
     //alert("Time:" + time + " Code: "+str);

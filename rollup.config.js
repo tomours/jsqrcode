@@ -2,7 +2,7 @@
  * @Author: junhui
  * @Date: 2023-07-12 16:31:46
  * @LastEditors: junhui
- * @LastEditTime: 2023-07-13 11:06:33
+ * @LastEditTime: 2023-07-13 14:29:38
  * @FilePath: \jsqrcode\rollup.config.js
  * @Description: 
  */
@@ -11,24 +11,17 @@ import babel from '@rollup/plugin-babel';
 import terser from '@rollup/plugin-terser';
 
 export default {
-    // input: 'demo/test.js',
-    // output: {
-    //     // dir: 'lib',
-    //     file: 'lib/qrcode.js',
-    //     name: 'zqrcode',
-    //     format: 'iife'  // iife cjs umd
-    // },
     input: 'src/index.js',
     output: [
         {
-            file: 'lib/zqrcode.js',
+            file: 'lib/jsqrcode.js',
             format: 'umd',
-            name: 'zqrcode'
+            name: 'jsqrcode'
         },
         {
-            file: 'lib/zqrcode.min.js',
+            file: 'lib/jsqrcode.min.js',
             format: 'umd',
-            name: 'zqrcode',
+            name: 'jsqrcode',
             plugins: [terser()]
         }
     ],
