@@ -1,0 +1,59 @@
+<!--
+ * @Author: junhui
+ * @Date: 2023-07-10 20:06:43
+ * @LastEditors: junhui
+ * @LastEditTime: 2023-07-13 11:50:50
+ * @FilePath: \jsqrcode\demo\test.html
+ * @Description: 
+-->
+<html>
+<head>
+<title>QRCODE</title>
+
+<style type="text/css">
+</style>
+
+
+<!-- <script type="text/javascript" src="grid.js"></script>
+<script type="text/javascript" src="version.js"></script>
+<script type="text/javascript" src="detector.js"></script>
+<script type="text/javascript" src="formatinf.js"></script>
+<script type="text/javascript" src="errorlevel.js"></script>
+<script type="text/javascript" src="bitmat.js"></script>
+<script type="text/javascript" src="datablock.js"></script>
+<script type="text/javascript" src="bmparser.js"></script>
+<script type="text/javascript" src="datamask.js"></script>
+<script type="text/javascript" src="rsdecoder.js"></script>
+<script type="text/javascript" src="gf256poly.js"></script>
+<script type="text/javascript" src="gf256.js"></script>
+<script type="text/javascript" src="decoder.js"></script>
+<script type="text/javascript" src="qrcode.js"></script>
+<script type="text/javascript" src="findpat.js"></script>
+<script type="text/javascript" src="alignpat.js"></script>
+<script type="text/javascript" src="databr.js"></script> -->
+
+<!-- <script type="text/javascript" src="./llqrcode.js"></script> -->
+<script type="text/javascript" src="../lib/zqrcode.js"></script>
+<!-- <script type="text/javascript" src="../src/qrcode.js" type="module"></script> -->
+</head>
+
+<body>
+    <div class="container"><input type="file" multiple id="input" /</div>
+</body>
+<script type="text/javascript">
+	console.log(zqrcode)
+	let input = document.getElementById('input')
+	input.addEventListener('change', function(e) {
+		console.log('load')
+		let file = e.target.files[0]
+		// console.log(file)
+		let reader = new FileReader();
+    	reader.readAsDataURL(file);
+		reader.onload = function () {
+			let a = zqrcode.decode(reader.result, function(data) {
+				console.log(data)
+			})
+		}
+	})
+</script>
+</html>

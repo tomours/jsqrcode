@@ -22,7 +22,8 @@
 * limitations under the License.
 */
 
-
+import BitMatrix from './bitmat.js';
+import FormatInformation from './formatinf.js';
 
 function ECB(count,  dataCodewords)
 {
@@ -73,7 +74,7 @@ function ECBlocks( ecCodewordsPerBlock,  ecBlocks1,  ecBlocks2)
 			}
 }
 
-function Version( versionNumber,  alignmentPatternCenters,  ecBlocks1,  ecBlocks2,  ecBlocks3,  ecBlocks4)
+export function Version( versionNumber,  alignmentPatternCenters,  ecBlocks1,  ecBlocks2,  ecBlocks3,  ecBlocks4)
 {
 	this.versionNumber = versionNumber;
 	this.alignmentPatternCenters = alignmentPatternCenters;
